@@ -1,0 +1,54 @@
+variables:
+  BUILD_ENV_SIT: "sit"
+  BUILD_ENV_UAT: "uat"
+  BUILD_ENV_PROD: "production"
+
+cache:
+  paths:
+  - node_modules
+
+stages:
+  - build_sit
+  - build_uat
+  - build_prod
+
+build_sit_job:
+  stage: build_sit
+  script:
+  - yarn install
+  - yarn run build --release --$BUILD_ENV_SIT
+  - mkdir -p /autodeploy/built/tiger-h5-sit/cache
+  - mkdir -p /autodeploy/built/tiger-h5-sit/web
+  - cp -r -f -v -u ./build/public/** /autodeploy/built/tiger-h5-sit/cache
+  - cp -r -f -v -u ./build/** /autodeploy/built/tiger-h5-sit/web
+  when: manual
+  only:
+    - dev
+
+# build_uat_job:
+#   stage: build_uat
+#   script:
+#   - yarn install
+#   - yarn run build --release --$BUILD_ENV_UAT
+#   - mkdir -p /autodeploy/built/alphax-mobile/alphax-mobile-uat/cache
+#   - mkdir -p /autodeploy/built/alphax-mobile/alphax-mobile-uat/web
+#   - cp -r -f -v -u ./build/public/** /autodeploy/built/alphax-mobile/alphax-mobile-uat/cache
+#   - cp -r -f -v -u ./build/** /autodeploy/built/alphax-mobile/alphax-mobile-uat/web
+#   - cd /autodeploy/built/alphax-mobile/alphax-mobile-uat && git pull origin master && git add . && git commit -m "uat built" && git push -u origin master
+#   when: manual
+#   only:
+#     - uat
+
+# build_prod_job:
+#   stage: build_prod
+#   script:
+#   - yarn install
+#   - yarn run build --release --$BUILD_ENV_PROD
+#   - mkdir -p /autodeploy/built/alphax-mobile/alphax-mobile-prod/cache
+#   - mkdir -p /autodeploy/built/alphax-mobile/alphax-mobile-prod/web
+#   - cp -r -f -v -u ./build/public/** /autodeploy/built/alphax-mobile/alphax-mobile-prod/cache
+#   - cp -r -f -v -u ./build/** /autodeploy/built/alphax-mobile/alphax-mobile-prod/web
+#   - cd /autodeploy/built/alphax-mobile/alphax-mobile-prod && git pull origin master && git add . && git commit -m "prod built" && git push -u origin master
+#   when: manual
+#   only:
+#     - master

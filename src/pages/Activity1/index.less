@@ -1,0 +1,183 @@
+@import '../../components/variables.less';
+.container {
+  background-color: #fff;
+  .title {
+    font-size: 1.2rem;
+    color: #fff;
+    letter-spacing: 3px;
+    background-color: #243366;
+    border-radius: 4px;
+    text-align: center;
+    padding: 0.89rem 0;
+  }
+  .present1 {
+    // img {
+    //   width: 100%;
+    //   max-width: 100%;
+    // }
+    .activityBG {
+      padding-bottom: 83.33%;
+      background-image: url('/images/activity1_bg.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .presentContent {
+      padding: 0 1rem;
+      position: relative;
+      top: -2.98rem;
+      .remarks {
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+        color: @sys-black;
+        text-align: center;
+        margin-top: 2rem;
+      }
+      .ticket {
+        // height: 26.26%;
+        margin-top: 2rem;
+        display: flex;
+        align-items: center;
+        background-image: url('/images/ticket.png');
+        background-repeat: round;
+        background-size: contain;
+        .ticketSection1 {
+          width: 27%;
+          font-size: 1.2rem;
+          font-weight: bold;
+          color: #b17000;
+          padding: 2.4rem 0;
+          text-align: center;
+        }
+        .ticketSection2 {
+          flex: 1;
+          padding: 0 1rem;
+          text-align: center;
+          .top {
+            font-size: 2.23rem;
+            color: #e8411a;
+            .little {
+              font-size: 1.2rem;
+            }
+          }
+          .bottom {
+            font-size: 0.87rem;
+            color: #b17000;
+            margin-top: 0.4rem;
+          }
+        }
+        .ticketSection3 {
+          padding-right: 1.34rem;
+          button {
+            background-color: transparent;
+            border-radius: 3px;
+            border: solid 1px #b17000;
+            padding: 0.6rem 0.5rem;
+            font-size: 0.87rem;
+            color: #b17000;
+          }
+        }
+      }
+    }
+  }
+  .present2 {
+    padding: 1rem;
+    .products {
+      margin-top: 1.34rem;
+      display: flex;
+      .item {
+        width: 50%;
+        .inner {
+          position: relative;
+          border-radius: 4px;
+          border: solid 2px @up;
+          text-align: center;
+          color: @up;
+          padding: 1.2rem 0 0 0;
+          &.left {
+            margin-right: 5px;
+          }
+          &.right {
+            margin-left: 5px;
+          }
+          .text1 {
+            font-size: 2rem;
+            font-weight: bold;
+            display: block;
+            letter-spacing: -1px;
+          }
+          .text2 {
+            font-size: 1rem;
+            display: block;
+            margin-top: 0.5rem;
+          }
+          .btnSection {
+            position: relative;
+            bottom: -1rem;
+            button {
+              background-color: @up;
+              border-radius: 0.8rem;
+              color: #fff;
+              font-size: 0.93rem;
+              letter-spacing: 2px;
+              padding: 5px 1rem;
+            }
+          }
+          .tag {
+            position: absolute;
+            top: 0.5rem;
+            right: -2px;
+            font-size: 0.67rem;
+            color: #fff;
+            background-color: @up;
+            border-radius: 0.5rem 0 0 0.5rem;
+            padding: 2px 5px;
+          }
+        }
+      }
+    }
+    .productText {
+      font-size: 1.2rem;
+      letter-spacing: 1px;
+      color: @sys-black;
+      text-align: center;
+      margin-top: 2rem;
+    }
+  }
+  .rule {
+    margin-top: 3.3rem;
+    .ruleTitle {
+      font-size: 1.2rem;
+      color: @sys-gray;
+      text-align: center;
+    }
+    ul {
+      padding-left: 1rem;
+      li {
+        color: @sys-gray;
+        line-height: 1.8rem;
+      }
+    }
+  }
+  .risk {
+    color: #c6d0d6;
+    margin-top: 2rem;
+    .riskTitle {
+      font-size: 1rem;
+      text-align: center;
+    }
+    .riskContent {
+      font-size: 0.8rem;
+      line-height: 1.7;
+      margin-top: 1.2rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .ticketSection2 {
+    padding: 0 0.5rem !important;
+  }
+  .ticketSection3 {
+    padding-right: 0.8rem !important;
+  }
+}

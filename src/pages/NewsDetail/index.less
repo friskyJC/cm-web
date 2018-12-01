@@ -1,0 +1,102 @@
+@import '../../components/variables.less';
+.container {
+  padding: 2rem 1rem 4.5rem 1rem;
+  background-color: #fff;
+  color: @sys-black;
+  .title {
+    font-size: 1.6rem;
+    font-weight: bold;
+    line-height: 1.5;
+  }
+  .readCount {
+    font-size: 0.8rem;
+    color: #c6d0d6;
+    padding: 1rem 0;
+  }
+  .status {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 1rem 0;
+    display: flex;
+    button {
+      display: flex;
+      align-items: center;
+      background-color: transparent;
+      padding: 0;
+    }
+    &.up {
+      button {
+        color: @up;
+      }
+    }
+    &.down {
+      button {
+        color: @down;
+      }
+    }
+    img {
+      width: 0.8rem;
+      margin-left: 0.6rem;
+    }
+  }
+  .analyse {
+    font-size: 1.07rem;
+    line-height: 1.2;
+    letter-spacing: 2px;
+    color: @sys-gray;
+    padding: 1rem;
+    background-color: @bg-gray;
+    border-radius: 3px;
+    border: solid 1px @border-gray;
+    margin-bottom: 1rem;
+    .suggestion {
+      color: #b17000;
+      background-color: @sys-yellow;
+      border-radius: 0 1rem 1rem 0;
+      padding: 0.5rem 1rem;
+      display: inline-block;
+      position: relative;
+      left: -1rem;
+    }
+    .suggestDetail {
+      margin-top: 1rem;
+      line-height: 1.5;
+      text-align: justify;
+      text-justify: inter-ideograph;
+    }
+  }
+  .fundamentals {
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 1rem 0;
+  }
+  .detail {
+    // padding: 1rem 0;
+    font-size: 1.2rem;
+    img {
+      width: 100%;
+      max-width: 100%;
+    }
+    p {
+      padding: 0.6rem 0;
+      margin: 0;
+      line-height: 1.5;
+      text-align: justify;
+      text-justify: inter-ideograph;
+    }
+  }
+  .remarks {
+    font-size: 1rem;
+    letter-spacing: 2px;
+    color: @up;
+    text-align: center;
+    padding: 1rem 0;
+  }
+  .banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+  }
+}

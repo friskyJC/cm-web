@@ -1,0 +1,58 @@
+@import '../../components/variables.less';
+.container {
+  .header {
+    padding: 2.5rem;
+    background-image: url('../../../public/images/course_bg.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    text-align: center;
+    img {
+      width: 9rem;
+    }
+    .subTitle {
+      font-size: 0.8rem;
+      color: #fff;
+      margin-top: 0.67rem;
+    }
+  }
+  .qaContainer {
+    margin: 1rem 1rem 4.5rem 1rem;
+    background-color: #fff;
+    border-radius: 3px;
+    .title {
+      font-size: 1.07rem;
+      color: @sys-black;
+      padding: 1rem;
+      font-weight: bold;
+      border-bottom: 2px solid @sys-yellow;
+    }
+    .qaItem {
+      padding: 1rem;
+      font-size: 1.07rem;
+      color: @sys-black;
+      border-bottom: 1px solid @border-gray;
+      &:last-child {
+        border-bottom: none;
+      }
+      a {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        span {
+          flex: 1;
+        }
+        img {
+          width: 12px;
+          height: 12px;
+        }
+      }
+    }
+  }
+  .banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+  }
+}

@@ -1,0 +1,160 @@
+/**
+ * React Starter Kit (https://www.reactstarterkit.com/)
+ *
+ * Copyright © 2014-present Kriasoft, LLC. All rights reserved.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE.txt file in the root directory of this source tree.
+ */
+
+@import '../variables.less';
+
+/*
+ * normalize.css is imported in JS file.
+ * If you import external CSS file from your internal CSS
+ * then it will be inlined and processed with CSS modules.
+ */
+
+/*
+ * Base styles
+ * ========================================================================== */
+
+html {
+  color: @sys-black;
+  font-weight: normal;
+  font-family: @font-family-base;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+}
+
+@media only screen and (max-width: 320px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (min-width: 321px) and (max-width: 540px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (min-width: 541px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+body {
+  margin: 0;
+
+  &::before {
+    content: '';
+    position: fixed;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    background-color: @bg-gray;
+    border: inherit;
+    display: block;
+  }
+}
+
+a {
+  color: @sys-black;
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+em {
+  color: @sys-red;
+}
+
+button {
+  border: none;
+  outline: 0;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/*
+ * Browser upgrade prompt
+ * ========================================================================== */
+
+:global(.browserupgrade) {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/*
+ * Print styles
+ * Inlined to avoid the additional HTTP request:
+ * http://www.phpied.com/delay-loading-your-print-css/
+ * ========================================================================== */

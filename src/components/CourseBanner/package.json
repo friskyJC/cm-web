@@ -1,0 +1,6 @@
+{
+  "name": "CourseBanner",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./CourseBanner.js"
+}

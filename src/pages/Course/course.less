@@ -1,0 +1,111 @@
+@import '../../components/variables.less';
+.container {
+  padding: 1rem 1rem 4.5rem 1rem;
+  .content {
+    background-color: #fff;
+    border-radius: 3px;
+    .courseName {
+      font-size: 1.34rem;
+      font-weight: bold;
+      color: @sys-black;
+      padding: 1rem;
+    }
+    .item {
+      padding: 1rem;
+      .title {
+        font-size: 1rem;
+        font-weight: bold;
+        color: @sys-black;
+      }
+      .answer {
+        font-size: 1rem;
+        color: @sys-gray;
+        margin-top: 1rem;
+        line-height: 1.6;
+        b {
+          color: @sys-black;
+        }
+      }
+      .chart {
+        margin-top: 1rem;
+        display: flex;
+        .icon {
+          width: 30px;
+          height: 60px;
+          margin: 0;
+        }
+        .text {
+          flex: 1;
+          font-size: 0.8rem;
+          padding-left: 0.67rem;
+          line-height: 1.5;
+          color: @sys-gray;
+        }
+      }
+      img {
+        width: 100%;
+        margin-top: 1rem;
+      }
+      .priceTable {
+        margin-top: 1rem;
+      }
+      table {
+        width: 100%;
+        color: #333;
+        font-size: 0.8rem;
+        border-spacing: 0;
+        border-left: 1px solid #e8e8e8;
+        border-top: 1px solid #e8e8e8;
+        tbody {
+          tr {
+            td {
+              text-align: center;
+              padding: 0.66rem 0;
+              border-right: 1px solid #e8e8e8;
+              border-bottom: 1px solid #e8e8e8;
+            }
+          }
+        }
+        .special {
+          width: 100px;
+          height: 40px;
+          padding: 0;
+          position: relative;
+        }
+        .diagonal {
+          width: 109px;
+          height: 1px;
+          background-color: #e8e8e8;
+          transform: rotate(21deg);
+          position: absolute;
+          top: 19px;
+          left: -5px;
+        }
+        .unit {
+          position: absolute;
+          right: 4px;
+          top: 3px;
+        }
+        .category {
+          position: absolute;
+          top: 24px;
+          left: 4px;
+        }
+        .title {
+          font-size: 1rem;
+          font-weight: bold;
+        }
+        .grayRow {
+          background-color: #fafafd;
+        }
+      }
+    }
+  }
+  .banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+  }
+}
