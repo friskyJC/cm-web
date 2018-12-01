@@ -21,64 +21,6 @@ const routes = {
       load: () => import(/* webpackChunkName: 'home' */ './home/index.js'),
     },
     {
-      path: '/course',
-      load: () => import(/* webpackChunkName: 'course' */ './course'),
-    },
-    {
-      path: '/course/1',
-      load: () => import(/* webpackChunkName: 'course1' */ './course/course1'),
-    },
-    {
-      path: '/course/2',
-      load: () => import(/* webpackChunkName: 'course2' */ './course/course2'),
-    },
-    {
-      path: '/course/3',
-      load: () => import(/* webpackChunkName: 'course3' */ './course/course3'),
-    },
-    {
-      path: '/course/4',
-      load: () => import(/* webpackChunkName: 'course4' */ './course/course4'),
-    },
-    {
-      path: '/course/5',
-      load: () => import(/* webpackChunkName: 'course5' */ './course/course5'),
-    },
-    {
-      path: '/course/6',
-      load: () => import(/* webpackChunkName: 'course6' */ './course/course6'),
-    },
-    {
-      path: '/course/7',
-      load: () => import(/* webpackChunkName: 'course7' */ './course/course7'),
-    },
-    {
-      path: '/course/8',
-      load: () => import(/* webpackChunkName: 'course8' */ './course/course8'),
-    },
-    {
-      path: '/course/9',
-      load: () => import(/* webpackChunkName: 'course9' */ './course/course9'),
-    },
-    {
-      path: '/course/10',
-      load: () =>
-        import(/* webpackChunkName: 'course10' */ './course/course10'),
-    },
-    {
-      path: '/payresult',
-      load: () => import(/* webpackChunkName: 'pay-result' */ './pay-result'),
-    },
-    {
-      path: '/useragreement',
-      load: () =>
-        import(/* webpackChunkName: 'user-agreement' */ './user-agreement'),
-    },
-    {
-      path: '/newsdetail',
-      load: () => import(/* webpackChunkName: 'news-detail' */ './news-detail'),
-    },
-    {
       path: '/activity1',
       load: () => import(/* webpackChunkName: 'activity1' */ './activity1'),
     },
